@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hedvig+Letters+Serif:opsz@12..24&family=Montserrat:wght@500&family=Outfit:wght@300;400&display=swap");
+
+:root {
+  /*     ### Primary */
+
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+
+  --Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-size: 10px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--Very-dark-blue-main-BG);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 0.1px);
+  margin: 0 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+h2 {
+  color: var(--Soft-blue);
+  font-size: 13px;
+}
+
+.header-img {
+  position: relative;
+}
+
+.header-img img {
+  border-radius: 0.6rem;
+  display: block;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 0;
+  background-color: cyan;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  border-radius: 0.6rem;
+  display: none;
+}
+
+.img-overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-img:hover .img-overlay {
+  display: block;
+  cursor: pointer;
+}
+
+.container {
+  background-color: var(--Very-dark-blue-card-BG);
+  padding: 1rem;
+  border-radius: 0.6rem;
+  max-width: 250px;
+}
+
+.content {
+  font-weight: 300;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:is(.time, .points) {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.details img {
+  margin-right: 5px;
+  width: 10%;
+}
+
+.points {
+  color: cyan;
+  font-weight: 600;
+}
+
+.time img {
+  width: 15%;
+}
+
+.time {
+  font-weight: 400;
+}
+
+.author {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.author h2 {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.author img {
+  width: 25px;
+  margin-right: 0.6rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.hover {
+  color: white;
+}
+
+.hover:hover {
+  color: cyan;
+  cursor: pointer;
+}
+
+hr {
+  border-color: var(--Very-dark-blue-line);
+}
